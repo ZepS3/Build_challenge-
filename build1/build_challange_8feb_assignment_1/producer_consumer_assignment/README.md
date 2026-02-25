@@ -3,6 +3,20 @@
 Here is my solution for the producer-consumer problem using Python. 
 I implemented a shared queue with a capacity of 10 items as required. The producer threads add items and consumer threads remove them, using condition variables to make sure they wait properly when the queue is full or empty.
 
+## Project Structure
+
+```
+src/
+ ├── producer.py
+ ├── consumer.py
+ ├── shared_queue.py
+ ├── data_transfer_manager.py
+ └── item.py
+
+main.py
+tests/
+```
+
 ## How to Run
 
 You can run the main program like this:
@@ -26,5 +40,6 @@ python -m unittest discover tests
 - **Queue**: I used `threading.Condition` because it seemed like the best way to handle the waiting logic.
 - **Classes**: created separate classes for Producer, Consumer and the SharedQueue to keep things organized.
 - **Stopping**: The threads stop gracefully when all items are done.
+
 
 
